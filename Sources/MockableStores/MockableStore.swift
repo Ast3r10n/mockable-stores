@@ -14,7 +14,7 @@ public protocol MockableStore: BaseSubscriber {
 }
 
 extension MockableStore {
-  #if DEBUG
+  #if DEBUG || TEST
   public var mockPublisher: AnyPublisher<MockableType, Error> {
     Just(MockableType.mock)
       .setFailureType(to: Error.self)
