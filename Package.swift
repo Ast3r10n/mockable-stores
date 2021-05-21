@@ -14,9 +14,15 @@ let package = Package(
   targets: [
     .target(
       name: "MockableStores",
-      dependencies: []),
+      dependencies: [],
+      swiftSettings: [
+        .define("TEST", .when(configuration: .debug))
+      ]),
     .testTarget(
       name: "MockableStoresTests",
-      dependencies: ["MockableStores"]),
+      dependencies: ["MockableStores"],
+      swiftSettings: [
+        .define("TEST", .when(configuration: .debug))
+      ]),
   ]
 )
