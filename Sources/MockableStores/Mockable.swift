@@ -9,19 +9,19 @@
 ///
 /// The `mock` property is to be used from within tests.
 public protocol Mockable {
-  #if DEBUG
+  #if DEBUG || TEST
   static var mock: Self { get }
   #endif
 }
 
 public protocol ListMockable {
-  #if DEBUG
+  #if DEBUG || TEST
   static var mockList: [Self] { get }
   #endif
 }
 
 extension Array: Mockable where Element: ListMockable {
-  #if DEBUG
+  #if DEBUG || TEST
   public static var mock: [Element] {
     Element.mockList
   }
