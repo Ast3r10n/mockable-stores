@@ -9,6 +9,7 @@ import XCTest
 import Combine
 @testable import MockableStores
 
+@available(iOS 13.0, *)
 final class BaseSubscriberTests: XCTestCase {
 
   class ExampleSubscriber: NSObject, BaseSubscriber {

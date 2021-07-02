@@ -9,6 +9,7 @@ import XCTest
 import Combine
 @testable import MockableStores
 
+@available(iOS 13.0, *)
 final class MockableStoreTests: XCTestCase {
 
   var cancellables: [AnyCancellable] = []
