@@ -8,7 +8,6 @@
 import Foundation
 #if canImport(Combine)
 import Combine
-#endif
 
 @available(iOS 13.0, *)
 public protocol MockableStore: BaseSubscriber {
@@ -27,3 +26,4 @@ extension MockableStore {
   }
   #endif
 }
+#endif
