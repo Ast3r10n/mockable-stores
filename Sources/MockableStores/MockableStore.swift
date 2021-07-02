@@ -6,13 +6,17 @@
 //
 
 import Foundation
+#if canImport(Combine)
 import Combine
+#endif
 
+@available(iOS 13.0, *)
 public protocol MockableStore: BaseSubscriber {
   associatedtype MockableType: Mockable
   var object: MockableType { get set }
 }
 
+@available(iOS 13.0, *)
 extension MockableStore {
   #if DEBUG
   public var mockPublisher: AnyPublisher<MockableType, Error> {
