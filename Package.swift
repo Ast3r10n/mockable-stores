@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "MockableStores",
+  name: "mockable-stores",
   platforms: [.iOS(.v11), .macOS(.v10_15), .tvOS(.v13), .watchOS(.v6)],
   products: [
     .library(
